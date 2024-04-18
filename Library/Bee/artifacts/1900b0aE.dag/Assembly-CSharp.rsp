@@ -362,6 +362,7 @@
 -analyzer:"D:/Unity/2022.3.22f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Unity/2022.3.22f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
+"Assets/Scripts/Dash.cs"
 "Assets/Scripts/PlayerMovement1.cs"
 -langversion:9.0
 

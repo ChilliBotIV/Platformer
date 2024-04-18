@@ -22,11 +22,16 @@ public class PlayerMovement1 : MonoBehaviour
 
 
 
+    
+
+
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        
     }
 
     void Update()
@@ -43,6 +48,7 @@ public class PlayerMovement1 : MonoBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+            
         }
         else
         {
@@ -70,5 +76,6 @@ public class PlayerMovement1 : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
     }
 }
