@@ -23,15 +23,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void LoadGame(){
-        string path = Path.Combine(Application.persistentDataPath , "save.json");
-        string path = "/home/tom/data/save.json";
-        StreamReader reader = new StreamReader(path);
-        reader.ReadToEnd();
-        JsonUtility.FromJson<SaveData>(reader.ReadToEnd());
+    //public void LoadGame(){
+        //string path = Path.Combine(Application.persistentDataPath , "save.json");
+        //string path = "/home/tom/data/save.json";
+        //StreamReader reader = new StreamReader(path);
+        //reader.ReadToEnd();
+        //JsonUtility.FromJson<SaveData>(reader.ReadToEnd());
         
 
-    }
+    //}
     public void PickedUp() {
         Collectibles++;
     }
