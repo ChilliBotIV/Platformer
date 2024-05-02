@@ -5,7 +5,7 @@ using UnityEngine;
 
 [Serializable]
 public class SaveData{
-    public int Collectibles;
+    public int Collectables;
     public int CurrentCheckpoint;
 }
 

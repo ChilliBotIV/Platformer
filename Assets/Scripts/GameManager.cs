@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
-    public int Collectibles = 0;
+    public int Collectables = 0;
     public int CurrentCheckpoint = 0;
 
 [ContextMenu("Save")]
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
         string path = Path.Combine(Application.persistentDataPath, "save.json");
         StreamWriter wrtier = new StreamWriter(path);
         SaveData newSavedData = new SaveData();
-        newSavedData.Collectibles = Collectibles;
+        newSavedData.Collectables = Collectables;
         newSavedData.CurrentCheckpoint = CurrentCheckpoint;
         JsonUtility.ToJson(newSavedData);
         wrtier.Write(JsonUtility.ToJson(newSavedData));
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     //}
     public void PickedUp() {
-        Collectibles++;
+        Collectables++;
     }
 
     public void ReachedCheckpoint(int checkpoint) {

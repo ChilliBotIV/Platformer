@@ -267,7 +267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 104960335}
   - component: {fileID: 104960336}
-  - component: {fileID: 104960337}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -303,20 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38009358cec4111469c834cced6e866e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &104960337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104960334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7292937e417ca42438e116c226a3f3fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyMixer: {fileID: 0}
-  MusicSlider: {fileID: 429621417}
 --- !u!1 &220437908
 GameObject:
   m_ObjectHideFlags: 0
