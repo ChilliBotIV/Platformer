@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int Collectables = 0;
     public int CurrentCheckpoint = 0;
 
+
 [ContextMenu("Save")]
     public void SaveGame(){
         string path = Path.Combine(Application.persistentDataPath, "save.json");
