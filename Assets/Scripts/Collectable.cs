@@ -8,7 +8,7 @@ public class Collectable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,4 +19,5 @@ public class Collectable : MonoBehaviour
         gameManager.PickedUp();
         Destroy(gameObject);
     }
+
 }

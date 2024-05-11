@@ -6,6 +6,7 @@ public class Dash : MonoBehaviour
 {
     PlayerMovement1 moveScript;
 
+    public float cooldown = 1f;
 [Range(0.2f, 1)]
     public float DashTime;
     [Range(100, 300)]
@@ -38,6 +39,7 @@ public class Dash : MonoBehaviour
             }
         
             yield return null;
+
         }
     }
 }
