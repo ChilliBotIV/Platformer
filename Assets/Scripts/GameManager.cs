@@ -7,8 +7,10 @@ using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public int Collectables = 0;
     public int CurrentCheckpoint = 0;
+
 
 
 [ContextMenu("Save")]
@@ -53,12 +55,12 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
