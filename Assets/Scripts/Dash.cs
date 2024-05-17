@@ -6,7 +6,7 @@ public class Dash : MonoBehaviour
 {
     PlayerMovement1 moveScript;
 
-    public float cooldown = 1f;
+    float cooldown;
 [Range(0.2f, 1)]
     public float DashTime;
     [Range(100, 300)]
@@ -21,9 +21,12 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && Time.timeScale != 0f)
+        cooldown -= Time.deltaTime;
+
+        if(Input.GetMouseButtonDown(0) && Time.timeScale != 0f && cooldown <=0)
         {
             StartCoroutine(MyDash());
+
         }
     }
 
@@ -37,6 +40,8 @@ public class Dash : MonoBehaviour
                 transform.Translate(Vector3.forward * DashSpeed * Time.deltaTime);
 
             }
+            cooldown = 1f;
+
         
             yield return null;
 

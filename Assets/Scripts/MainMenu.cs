@@ -37,4 +37,11 @@ public class NewBehaviourScript : MonoBehaviour
         DontDestroyOnLoad(buttonSound.gameObject);
 
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+        buttonSound.Play();
+        DontDestroyOnLoad(buttonSound.gameObject);
+    }
 }

@@ -5,7 +5,10 @@ using UnityEngine;
 public class DamagePlayer : MonoBehaviour
 {
     private PlayerHealth Health;
+    public GameObject Player;
     public int damage;
+    
+    public int knockback = 250;
     float cooldown;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,7 @@ public class DamagePlayer : MonoBehaviour
         if (cooldown <= 0){
             if (Health != null){
                 Health.TakeDamage();
+                Player.transform.position = new Vector3(0, 0, -knockback);
             }
             cooldown = 1f;
         }
