@@ -8,8 +8,8 @@ public class PlayerHealth : MonoBehaviour
 
     public static PlayerHealth instance;
 
-    public event Action DamageTaken;
-    public event Action HealthUpgraded;
+    
+    private GameManager manager;
 
     public int maxHealth;
     public int health;
@@ -25,19 +25,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<GameManager>();
+        manager = GetComponent<GameManager>();
         health = maxHealth;
     }
 
     // Update is called once per frame
+    [ContextMenu("takedamage")]
     public void TakeDamage()
     {
         if(health <= 0){
             return;
         }
         health -= 1;
-        if(DamageTaken != null){
-            DamageTaken();
-        }
+       // if(DamageTaken != null){
+       //     manager.DamageTaken();
+       //     Debug.Log("damage has been taken");
+       // }
     }
 
     public void Heal()
@@ -52,9 +56,9 @@ public class PlayerHealth : MonoBehaviour
     public void UpgradeHealth(){
         maxHealth++;
         health = maxHealth;
-        if(HealthUpgraded != null){
-            HealthUpgraded();
-        }
+      //  if(HealthUpgraded != null){
+      //      manager.HealthUpgraded();
+      //  }
     }
 
 }

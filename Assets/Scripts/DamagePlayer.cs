@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-
+    private PlayerHealth Health;
     public int damage;
     float cooldown;
     // Start is called before the first frame update
     void Start()
     {
+        Health = FindObjectOfType<PlayerHealth>();
 
     }
 
@@ -17,14 +18,13 @@ public class DamagePlayer : MonoBehaviour
         cooldown -= Time.deltaTime;
     }
 
-//    public void OnTriggerEnter(){
-//        Health health = GetComponent<PlayerHealth>();
-//        if (cooldown <= 0){
-//            if (health != null){
-//                health.TakeDamage(damage);
-//            }
-//            cooldown = 1f;
-//        }
-//    }
+    public void OnTriggerEnter(){
+        if (cooldown <= 0){
+            if (Health != null){
+                Health.TakeDamage();
+            }
+            cooldown = 1f;
+        }
+    }
         
 }
