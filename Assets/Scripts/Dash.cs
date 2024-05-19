@@ -6,6 +6,9 @@ public class Dash : MonoBehaviour
 {
     PlayerMovement1 moveScript;
 
+    public AudioSource dashSound;
+    public AudioSource cooldownSound;
+
     float cooldown;
 [Range(0.2f, 1)]
     public float DashTime;
@@ -26,7 +29,13 @@ public class Dash : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && Time.timeScale != 0f && cooldown <=0)
         {
             StartCoroutine(MyDash());
+            dashSound.Play();
 
+
+        }
+
+        if(cooldown >= 0){
+            cooldownSound.Play();
         }
     }
 
