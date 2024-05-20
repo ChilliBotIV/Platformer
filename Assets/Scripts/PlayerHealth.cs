@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
+
+
 
 public class PlayerHealth : MonoBehaviour
 {
 
     public static PlayerHealth instance;
+
+
+    public GameObject GameOverCanvas;
 
     
     private GameManager manager;
@@ -59,6 +65,18 @@ public class PlayerHealth : MonoBehaviour
       //  if(HealthUpgraded != null){
       //      manager.HealthUpgraded();
       //  }
+    }
+
+    void Update(){
+        if(health == 0){
+            GameOver();
+        }
+    }
+
+    void GameOver(){
+        GameOverCanvas.SetActive(true);
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }

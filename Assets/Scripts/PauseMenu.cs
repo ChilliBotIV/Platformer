@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     public AudioSource buttonSound;
     public AudioMixerSnapshot defaultSnapshot;
     public AudioMixerSnapshot menuSnapshot;
+    public GameObject Player;
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +63,9 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
 
+    }
+
+    public void Retry(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
