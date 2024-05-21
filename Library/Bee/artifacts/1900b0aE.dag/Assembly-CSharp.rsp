@@ -378,6 +378,7 @@
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerMovement1.cs"
 "Assets/Scripts/Respawn.cs"
+"Assets/Scripts/ShipPart.cs"
 "Assets/Scripts/Spin.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

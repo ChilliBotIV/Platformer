@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int Collectables = 0;
+    public int ShipParts = 0;
     public int CurrentCheckpoint = 0;
 
 
@@ -37,6 +38,10 @@ public class GameManager : MonoBehaviour
     //}
     public void PickedUp() {
         Collectables++;
+    }
+
+    public void Shipped(){
+        ShipParts++;
     }
 
     //Health
