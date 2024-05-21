@@ -12,7 +12,7 @@ public class Dash : MonoBehaviour
     float cooldown;
 [Range(0.2f, 1)]
     public float DashTime;
-    [Range(100, 300)]
+    [Range(50, 300)]
     public float DashSpeed;
     // Start is called before the first frame update
     void Start()

@@ -70,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
     void Update(){
         if(health == 0){
             GameOver();
+            GetComponent<Animator>().Play("Death");
         }
     }
 
